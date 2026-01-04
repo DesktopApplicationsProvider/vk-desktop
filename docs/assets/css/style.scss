@@ -2,30 +2,27 @@
 ---
 @import "{{ site.theme }}";
 
-/* Style wrapper so buttons are inline and aligned */
+/* Override Slate theme's absolute positioning for the GitHub banner */
+#forkme_banner {
+  position: static !important; /* Forces it to stay inside the flexbox */
+  margin: 0 !important;       /* Removes the default top/right offsets */
+  display: inline-block;
+}
+
+/* Ensure the container sits in the top right corner */
 .header-buttons {
   display: flex;
-  gap: 0.5rem;
+  gap: 10px;
   align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
-/* Your language button style */
+/* Adjust the language switch to match the GitHub button's height if needed */
 .lang-switch {
-  background-color: #0090ff;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
+  display: inline-block;
+  line-height: 1.2;
+  /* You can keep your existing padding and colors */
 }
-
-/* Match it with the GitHub button style */
-.github-btn {
-  background-color: #24292f;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
