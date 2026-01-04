@@ -3,38 +3,38 @@
 @import "{{ site.theme }}";
 
 /* 1. Position the container in the top-right corner */
+/* Position the container at the very top */
 .header-buttons {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0;           /* Aligns to the top of the header_wrap */
+  right: 5%;        /* Adjust this % to align with your theme's 'inner' width */
   display: flex;
-  align-items: center;
-  gap: 10px; /* Space between the two buttons */
+  align-items: flex-start; /* Aligns buttons to the top of the flex container */
+  gap: 10px; 
   z-index: 10;
+  margin-top: 0;    /* Ensures no extra spacing at the top */
 }
 
-/* 2. Fix the GitHub button so it stays inside the flexbox */
+/* Force the GitHub button to ignore theme offsets */
 #forkme_banner {
-  position: static !important; /* Overrides the theme's absolute positioning */
-  margin: 0 !important;       /* Removes theme default offsets */
+  position: static !important; 
+  margin: 0 !important;       
+  padding: 5px 15px !important; /* Matches height with your lang button */
+  top: 0 !important;            /* Overrides Slate's internal top setting */
 }
 
-/* 3. Style the Language button to match the GitHub button shape */
+/* Ensure the language button is flush with the top */
 .lang-switch {
   background-color: #0090ff;
-  color: #fff !important; /* Ensure text stays white */
+  color: #fff !important;
   padding: 5px 15px;
-  border-radius: 0 0 5px 5px; /* Rounded bottom to match Slate style */
+  border-radius: 0 0 5px 5px; 
   font-weight: bold;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 16px;
+  margin-top: 0;                /* Removes any top margin */
+  display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: none;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: #0070cc;
-    text-decoration: none;
-  }
+  border-top: none;             /* Removes top border for a flush look */
 }
 
