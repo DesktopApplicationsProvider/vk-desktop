@@ -1,0 +1,31 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* Style wrapper so buttons are inline and aligned */
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Your language button style */
+.lang-switch {
+  background-color: #0090ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Match it with the GitHub button style */
+.github-btn {
+  background-color: #24292f;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+

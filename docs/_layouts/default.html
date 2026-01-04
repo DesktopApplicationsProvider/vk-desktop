@@ -16,31 +16,28 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-            {% if page.url contains '/ru/' %}
-              <a class="header-link" href="{{ page.url | replace: '/ru/', '/' }}" style="margin-right: .5rem;">
-                Eng
-              </a>
-            {% else %}
-              <a class="header-link" href="/ru/{{ page.url }}" style="margin-right: .5rem;">
-                Руc
-              </a>
-            {% endif %}
-
-  <a href="https://github.com/DesktopApplicationsProvider/vk-desktop/releases/download/1.0/VK.desktop.install.exe"
-     class="btn"
-     style="background-color: #0090ff; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;">
-     <!-- Your Image -->
-     <img src="{{ site.baseurl }}/assets/images/download.png" 
-          alt="Download Icon" 
-          style="width: 20px; height: 20px;">
-     
-     <!-- Button Text -->
-     Скачать VK Desktop
-  </a>
-
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
+              <div class="header-buttons">
+                {% if page.url contains '/ru/' %}
+                  <a href="{{ page.url | replace: '/ru/', '/' | relative_url }}"
+                     class="btn lang-switch"
+                     title="Switch to English">
+                    En 🇬🇧 
+                  </a>
+                {% else %}
+                  <a href="{{ '/ru' | append: page.url | relative_url }}"
+                     class="btn lang-switch"
+                     title="Перейти на русский">
+                    Рус 🇷🇺 
+                  </a>
+                {% endif %}
+                {% if site.github.is_project_page %}
+                <a id="forkme_banner"
+                   href="{{ site.github.repository_url }}"
+                   class="btn github-btn">
+                  View on GitHub
+                </a>
+                {% endif %}
+              </div>
 
           <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
