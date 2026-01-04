@@ -2,39 +2,43 @@
 ---
 @import "{{ site.theme }}";
 
-/* 1. Position the container in the top-right corner */
-/* Position the container at the very top */
+/* 1. Adjust the container position */
 .header-buttons {
   position: absolute;
-  top: 0;           /* Aligns to the top of the header_wrap */
-  right: 5%;        /* Adjust this % to align with your theme's 'inner' width */
+  top: 0;
+  right: 20px;       /* Increased from 0 to pull it away from the very edge */
   display: flex;
-  align-items: flex-start; /* Aligns buttons to the top of the flex container */
+  align-items: flex-start;
   gap: 10px; 
   z-index: 10;
-  margin-top: 0;    /* Ensures no extra spacing at the top */
 }
 
-/* Force the GitHub button to ignore theme offsets */
+/* 2. Fix the GitHub button sizing and overflow */
 #forkme_banner {
   position: static !important; 
   margin: 0 !important;       
-  padding: 5px 15px !important; /* Matches height with your lang button */
-  top: 0 !important;            /* Overrides Slate's internal top setting */
+  padding: 5px 15px 5px 45px !important; /* Extra left padding for the GitHub icon */
+  width: auto !important;                /* Allows button to grow with text */
+  height: auto !important;               /* Allows button to grow with font-size */
+  display: block !important;             /* Ensures it respects the flex container */
+  background-position: 10px 50% !important; /* Keeps the GitHub icon on the left */
 }
 
-/* Ensure the language button is flush with the top */
+/* 3. Ensure the Language button doesn't shrink */
 .lang-switch {
   background-color: #0090ff;
   color: #fff !important;
   padding: 5px 15px;
-  border-radius: 0 0 5px 5px; 
+  border-radius: 0 0 1px 1px; 
   font-weight: bold;
   text-decoration: none;
+  white-space: nowrap;       /* Prevents the text from wrapping to two lines */
+  flex-shrink: 0;            /* Prevents the button from being squashed */
   font-size: 16px;
   margin-top: 0;                /* Removes any top margin */
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-top: none;             /* Removes top border for a flush look */
 }
+
 
