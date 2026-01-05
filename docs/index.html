@@ -3,26 +3,55 @@ layout: default
 title: VK Desktop Home Page | 
 permalink: /
 ---
-<div class="link-container" style="margin: 20px 0;">
-  <a href="https://github.com/DesktopApplicationsProvider/vk-desktop/releases/download/1.0/VK.desktop.install.exe"
-     class="btn"
-     style="background-color: #0090ff; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;">
-     <!-- Your Image -->
-     <img src="{{ site.baseurl }}/assets/images/download.png" 
-          alt="Download Icon" 
-          style="width: 20px; height: 20px;">
-     
-     <!-- Button Text -->
-     Download VK Desktop
-  </a>
-</div>
+<style>
+  /* Use the existing container as a relative anchor */
+  .hero .container {
+    position: relative;
+  }
 
-<!-- =========================== -->
-<!-- Hero / Intro Section -->
+  .download-button-overlay {
+    background-color: #0090ff;
+    color: #ffffff !important;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+    /* Position it on the far right, vertically centered */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 10;
+    transform: translateY(-130px); 
+  }
+
+  .download-button-overlay img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Ensure the text doesn't run into the button on medium screens */
+  .hero-heading, .hero-subheading {
+    white-space: nowrap;
+  }
+</style>
+
 <section class="hero primary">
   <div class="container">
     <h1 class="hero-heading">VK Desktop</h1>
     <p class="hero-subheading">Simple, desktop client for VK</p>
+
+    <a href="https://github.com/DesktopApplicationsProvider/vk-desktop/releases/download/1.0/VK.desktop.install.exe"
+       class="download-button-overlay">
+       <img src="{{ site.baseurl }}/assets/images/download.png" alt="Download">
+       Download VK Desktop
+    </a>
   </div>
 </section>
 

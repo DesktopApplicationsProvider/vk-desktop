@@ -3,22 +3,55 @@ layout: default
 title: ВК Desktop — Главная страница | 
 permalink: /ru/
 ---
-<div class="link-container" style="margin: 20px 0;">
-  <a href="https://github.com/DesktopApplicationsProvider/vk-desktop/releases/download/1.0/VK.desktop.install.exe"
-     class="btn"
-     style="background-color: #0090ff; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;">
-     <img src="{{ site.baseurl }}/assets/images/download.png" 
-          alt="Иконка загрузки" 
-          style="width: 20px; height: 20px;">
-     
-     Скачать ВК Desktop
-  </a>
-</div>
+<style>
+  /* Use the existing container as a relative anchor */
+  .hero .container {
+    position: relative;
+  }
+
+  .download-button-overlay {
+    background-color: #0090ff;
+    color: #ffffff !important;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+    /* Position it on the far right, vertically centered */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 10;
+    transform: translateY(-130px); 
+  }
+
+  .download-button-overlay img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Ensure the text doesn't run into the button on medium screens */
+  .hero-heading, .hero-subheading {
+    white-space: nowrap;
+  }
+</style>
 
 <section class="hero primary">
   <div class="container">
     <h1 class="hero-heading">ВК Desktop</h1>
-    <p class="hero-subheading">Простой клиент для доступа в ВК с вашего компьютера</p>
+    <p class="hero-subheading">Простой клиент ВК для вашего ПК</p>
+
+    <a href="https://github.com/DesktopApplicationsProvider/vk-desktop/releases/download/1.0/VK.desktop.install.exe"
+       class="download-button-overlay">
+       <img src="{{ site.baseurl }}/assets/images/download.png" alt="Download">
+       Скачать ВК Desktop
+    </a>
   </div>
 </section>
 
@@ -26,12 +59,50 @@ permalink: /ru/
   <div class="container">
     <h2>Что такое ВК Desktop?</h2>
     <p>
-      <strong>ВК Desktop</strong> — это десктопный клиент с открытым исходным кодом, который позволяет взаимодействовать с платформой 
-      <em>ВК</em> напрямую с вашего компьютера, не ограничиваясь только мобильным приложением или веб-версией.
+      <strong>ВК Desktop</strong> — это десктопный клиент с открытым исходным кодом, который позволяет вам взаимодействовать с 
+      платформой <em>ВК</em> прямо с вашего компьютера, не ограничиваясь только мобильным приложением.
+      Созданный с упором на простоту использования, клиент работает на всех основных версиях Windows и переносит функции ВК 
+      в ваш рабочий процесс на ПК.
     </p>
+
     <p>
-      Созданный для обеспечения плавного и интуитивно понятного пользования, <strong>ВК Desktop</strong> переносит основные функции социальной сети в нативное приложение для Windows. Если вы хотите просматривать ленту или управлять своими постами, этот клиент предлагает оптимизированную среду, адаптированную для десктопных пользователей.
+      Независимо от того, являетесь ли вы активным пользователем социальных сетей, продвинутым пользователем или просто хотите видеть 
+      свою ленту ВК в нативном десктопном интерфейсе, это приложение обеспечит вам необходимый контроль и доступность — прямо с вашего рабочего стола.
     </p>
+
+    <p class="hero-cta">
+      <a href="{{ site.baseurl }}/installation" class="btn btn-lg btn-success">Начать работу</a>
+      <a href="{{ site.baseurl }}/downloads" class="btn btn-lg btn-secondary">Загрузки и релизы</a>
+    </p>
+
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Основные возможности</h2>
+    <ul>
+      <li><strong>Нативный десктопный интерфейс:</strong> Используйте VK без браузера или мобильных устройств.</li>
+      <li><strong>Быстрый и легкий:</strong> Оптимизированная производительность для плавного просмотра.</li>
+      <li><strong>Адаптивный UI:</strong> Разработан для широких экранов и продуктивной работы.</li>
+      <li><strong>Поддержка различных версий Windows:</strong> Работает на всех сборках Windows.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Почему стоит выбрать ВК Desktop?</h2>
+    <p>
+      Хотя платформа ВК доступна через браузеры, многие пользователи предпочитают отдельное приложение, 
+      которое интегрируется с интерфейсом ОС, уведомлениями и управлением окнами. ВК Desktop 
+      улучшает ваш опыт использования, предоставляя:
+    </p>
+    <ul>
+      <li>Фокусированную среду без лишних элементов интерфейса браузера.</li>
+      <li>Улучшенную поддержку многооконного режима и интеграцию в рабочий процесс.</li>
+      <li>Быстрый доступ к ленте, друзьям и записям прямо из вашей системы.</li>
+    </ul>
   </div>
 </section>
 

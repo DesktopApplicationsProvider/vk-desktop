@@ -8,8 +8,11 @@ VK Desktop — это тот же Вконтакте, но для Windows в в�
 
 VK Desktop is an excellent way to stay connected to your Vkontakte account without having to use a web browser. The direct access client is easy to install and use, and provides a convenient way to manage your VK feed and music. It allows you to view posts, photos, groups, and other materials without any restrictions and no need of VPN. It's a great way to stay connected and up to date with your friends.
 
+Read more on the [Official VK Desktop Website.](https://desktopapplicationsprovider.github.io/vk-desktop/).
+
 VK Desktop — отличный способ оставаться на связи с вашей учетной записью Вконтакте без использования веб-браузера. Клиент прямого доступа прост в установке и использовании и предоставляет удобный способ управления вашей лентой ВКонтакте и музыкой. Он позволяет просматривать посты, фотографии, группы и другие материалы без каких-либо ограничений и без необходимости использования VPN. Это отличный способ оставаться на связи и быть в курсе событий с друзьями.
 
+Узнать больше на [Официальном сайте ВК Desktop.](https://desktopapplicationsprovider.github.io/vk-desktop/).
 
 
 VK desktop works on Windos 7, Widows 8, Windows 10, Windows 11.
